@@ -26,15 +26,16 @@ import TicketInfo from "../components/TicketInfo";
 // tab unstyled
 const TabsList = styled(TabsListUnstyled)(
   ({ theme }) => `
-  min-width: 400px;
+  width: 100%;
   background-color: #FFFFFF;
+  border: 1px solid red;
   border-radius: 5px;
   margin-bottom: 16px;
   padding: 0px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  align-content: space-between;
+  justify-content: start;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
   `
 );
@@ -46,7 +47,7 @@ const Tab = styled(TabUnstyled)`
   font-size: 0.875rem;
   font-weight: 600;
   background-color: transparent;
-  width: 100%;
+  flex-basis: 25%;
   padding: 0px;
   border: none;
   border-radius: 0px;
@@ -78,7 +79,7 @@ const TabPanel = styled(TabPanelUnstyled)(
 
 const MainContent = () => {
   return (
-    <Box sx={{ p: "10px" }}>
+    <Box sx={{ p: "10px", border: "1px solid red" }}>
       {/* total transport  */}
       <Typography>{48} Available Buses</Typography>
 
@@ -104,6 +105,7 @@ const MainContent = () => {
                 Earliest Buses
               </MenuItem>
             </Tab>
+
             <Tab>
               <MenuItem
                 disableRipple={true}
@@ -122,6 +124,7 @@ const MainContent = () => {
                 Cheapest Buses
               </MenuItem>
             </Tab>
+
             <Tab>
               <MenuItem
                 disableRipple={true}
@@ -140,6 +143,7 @@ const MainContent = () => {
                 Available Buses
               </MenuItem>
             </Tab>
+
             <Tab>
               <MenuItem
                 disableRipple={true}

@@ -9,10 +9,10 @@ const TicketInfo = () => {
   return (
     <>
       <Grid container>
-        <Grid item sx={12} md={8}>
+        <Grid item xs={12} md={8}>
           <TicketDetails />
         </Grid>
-        <Grid item sx={12} md={4}>
+        <Grid item xs={12} md={4}>
           <TicketSummary />
         </Grid>
       </Grid>

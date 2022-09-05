@@ -34,7 +34,7 @@ const TicketDetails = () => {
   };
 
   return (
-    <Box >
+    <Box sx={{ border: "1px solid red" }}>
       <Box sx={{ padding: "20px 12px" }}>
         <Stack
           direction="row"
@@ -309,12 +309,13 @@ const TicketDetails = () => {
       <Box>
         <Stack
           direction="row"
-          justifyContent="space-between"
+          // justifyContent="center"
           alignItems="center"
           sx={{
             p: "8px 16px 8px 16px",
             backgroundColor: "#FAFAFA",
             color: "white",
+            flexWrap: "wrap",
           }}
         >
           <Button
@@ -324,11 +325,14 @@ const TicketDetails = () => {
               textTransform: "capitalize",
               p: "0px",
               m: "0px",
+              flexBasis: "20%",
+              border: "1px solid red"
             }}
             startIcon={<WeekendIcon sx={{ color: "#DB6848" }} />}
           >
             {3} sold out
           </Button>
+
           <Button
             sx={{
               color: "#4C4C4C",
@@ -336,11 +340,14 @@ const TicketDetails = () => {
               textTransform: "capitalize",
               p: "0px",
               m: "0px",
+              flexBasis: "20%",
+              
             }}
             startIcon={<WeekendIcon sx={{ color: "#EB950E" }} />}
           >
             {2} booked
           </Button>
+
           <Button
             sx={{
               color: "#4C4C4C",
@@ -348,11 +355,13 @@ const TicketDetails = () => {
               textTransform: "capitalize",
               p: "0px",
               m: "0px",
+              flexBasis: "20%",
             }}
             startIcon={<WeekendIcon sx={{ color: "#2E7D31" }} />}
           >
             {2} selected
           </Button>
+
           <Button
             sx={{
               color: "#4C4C4C",
@@ -360,11 +369,13 @@ const TicketDetails = () => {
               textTransform: "capitalize",
               p: "0px",
               m: "0px",
+              flexBasis: "20%",
             }}
             startIcon={<WeekendIcon sx={{ color: "#5BB4FF" }} />}
           >
             {14} available
           </Button>
+
           <Button
             sx={{
               color: "#4C4C4C",
@@ -372,6 +383,7 @@ const TicketDetails = () => {
               textTransform: "capitalize",
               p: "0px",
               m: "0px",
+              flexBasis: "20%",
             }}
             startIcon={<WeekendIcon sx={{ color: "#8E8E93" }} />}
           >
