@@ -45,7 +45,6 @@ const Tab = styled(TabUnstyled)`
   width: 50%;
   padding: 8px;
   border: none;
-  // border-radius: 3px;
   display: flex;
   justify-content: center;
   &:hover {
@@ -75,12 +74,13 @@ const TabPanel = styled(TabPanelUnstyled)(
 
 const TicketSummary = () => {
   return (
-    <Box sx={{ borderRadius: "6px" }}>
+    <Box>
       <Box
         sx={{
+          width: "100%",
           padding: "20px 12px",
           backgroundColor: "#E5F2FE",
-          borderRadius: { xs: "0px", md: "0px 6px 0px  0px" },
+          borderRadius: { xs: "0px", md: "0px 6px 0px 0px" },
           textAlign: "right",
           m: "0px",
         }}
@@ -290,7 +290,14 @@ const TicketSummary = () => {
               </Box>
             </Box>
 
-            <Box sx={{ backgroundColor: "#FAFAFA", p: "10px" }}>
+            {/*   */}
+            <Box
+              sx={{
+                backgroundColor: "#FAFAFA",
+                p: "10px",
+                borderRadius: "0px 0px 3px",
+              }}
+            >
               <FormGroup sx={{ fontSize: "12px" }}>
                 <FormControlLabel
                   control={<Checkbox />}
