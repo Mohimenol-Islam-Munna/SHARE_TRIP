@@ -29,7 +29,7 @@ const LeftSideBar = () => {
         <Stack
           direction="row"
           justifyContent="space-between"
-          sx={{ p: "10px 10px 25px" }}
+          sx={{ p: "10px 10px 25px", flexWrap: "wrap" }}
         >
           <Typography
             sx={{
@@ -64,7 +64,7 @@ const LeftSideBar = () => {
           <Stack
             direction="row"
             justifyContent="space-between"
-            sx={{ my: "18px" }}
+            sx={{ my: "18px", flexWrap: "wrap" }}
           >
             <Box>
               <Typography sx={{ fontSize: "12px", color: "#000000" }}>
