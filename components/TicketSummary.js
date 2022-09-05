@@ -45,7 +45,7 @@ const Tab = styled(TabUnstyled)`
   width: 50%;
   padding: 8px;
   border: none;
-  border-radius: 0px;
+  // border-radius: 3px;
   display: flex;
   justify-content: center;
   &:hover {
@@ -75,11 +75,12 @@ const TabPanel = styled(TabPanelUnstyled)(
 
 const TicketSummary = () => {
   return (
-    <Box sx={{ borderRadius: "6px"}}>
+    <Box sx={{ borderRadius: "6px" }}>
       <Box
         sx={{
           padding: "20px 12px",
           backgroundColor: "#E5F2FE",
+          borderRadius: { xs: "0px", md: "0px 6px 0px  0px" },
           textAlign: "right",
           m: "0px",
         }}
@@ -130,21 +131,21 @@ const TicketSummary = () => {
 
       <Box
         sx={{
-          borderLeft: "1px solid lightgray",
+          borderLeft: { xs: "none", md: "1px solid lightgray" },
           m: "0px",
         }}
       >
         <TabsUnstyled defaultValue={0}>
           <Box sx={{ px: "10px", py: "1px" }}>
             <TabsList>
-              <Tab>
+              <Tab sx={{ borderRadius: "3px 0px 0px 3px" }}>
                 <Typography
                   sx={{ textTransform: "uppercase", fontSize: "14px" }}
                 >
                   Seat Info
                 </Typography>
               </Tab>
-              <Tab>
+              <Tab sx={{ borderRadius: "0px 3px 3px 0px" }}>
                 <Typography
                   sx={{ textTransform: "uppercase", fontSize: "14px" }}
                 >

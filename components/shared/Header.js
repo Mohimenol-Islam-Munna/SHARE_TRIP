@@ -118,7 +118,7 @@ const Header = () => {
             </Menu>
           </Box>
 
-          {/* menu options  */}
+          {/* menu  */}
           <Box
             sx={{
               flexGrow: 1,
