@@ -78,7 +78,7 @@ const TabPanel = styled(TabPanelUnstyled)(
 
 const MainContent = () => {
   return (
-    <Box sx={{ p: "10px" }}>
+    <Box sx={{ p: {xs: "0px", sm: "10px"} }}>
       {/* total transport  */}
       <Typography>{48} Available Buses</Typography>
 

@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "rgba(56, 132, 247, 0.16)" }}
+      sx={{ backgroundColor: "rgba(56, 132, 247, 0.16)", boxShadow: "none" }}
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters>
@@ -64,7 +64,7 @@ const Header = () => {
               display: "flex",
               fontFamily: "monospace",
               fontWeight: 700,
-              color: "inherit",
+              color: "#1882FF",
               textDecoration: "none",
               textTransform: "uppercase",
             }}
@@ -86,7 +86,6 @@ const Header = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
             >
               <MenuIcon />
             </IconButton>
@@ -111,19 +110,34 @@ const Header = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={() => console.log("header")}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" sx={{ color: "#000000" }}>
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
 
           {/* menu options  */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, color: "#000000" }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              color: "#000000",
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "#000000",
+                  display: "block",
+                  fontSize: "14px",
+                  fontWeight: "400",
+                  textTransform: "Capitalize",
+                }}
               >
                 {page}
               </Button>

@@ -6,12 +6,13 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        height: "70px",
+        padding: "20px",
         textAlign: "center",
-        backgroundColor: "blueviolet",
+        backgroundColor: "rgba(56, 132, 247, 0.16)",
+        boxShadow: "none",
       }}
     >
-      <Typography> Footer component </Typography>
+      <Typography> Footer </Typography>
     </Box>
   );
 };

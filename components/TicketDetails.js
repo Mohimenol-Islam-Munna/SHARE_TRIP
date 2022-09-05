@@ -283,9 +283,9 @@ const TicketDetails = () => {
                 label="Boarding Point"
                 onChange={(e) => boardingChangeHandler(e)}
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem value="Gabtoli">Gabtoli</MenuItem>
+                <MenuItem value="Mohakhali">Mohakhali</MenuItem>
+                <MenuItem value="Colabagan">Colabagan</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -300,9 +300,9 @@ const TicketDetails = () => {
                 label="Dropping Point"
                 onChange={(e) => droppingChangeHandler(e)}
               >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
+                <MenuItem value="Gabtoli">Gabtoli</MenuItem>
+                <MenuItem value="Mohakhali">Mohakhali</MenuItem>
+                <MenuItem value="Colabagan">Colabagan</MenuItem>
               </Select>
             </FormControl>
           </Grid>
