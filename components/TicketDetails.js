@@ -33,23 +33,32 @@ const TicketDetails = () => {
   };
 
   return (
-    <Box sx={{ border: "1px solid salmon", padding: "20px 12px" }}>
+    <Box sx={{ border: "1px solid salmon", padding: "20px 12px 20px 0px" }}>
       <Box>
         <Stack
           direction="row"
           justifyContent="space-between"
-          alignItems="center"
-          sx={{ p: "5px", backgroundColor: "gray" }}
+          alignItems="start"
+          sx={{ border: "1px solid red" }}
         >
-          <Typography component="h3">Ac</Typography>
+          <Typography
+            component="h4"
+            sx={{
+              m: "0px",
+            }}
+          >
+            Ac
+          </Typography>
           <Box sx={{ textAlign: "center" }}>
             <Typography
               component="h3"
               sx={{
+                m: "0px",
                 py: "5px",
-                px: "10px",
-                backgroundColor: "yellow",
-                borderRadius: "15px",
+                px: "12px",
+                backgroundColor: "#BBDDFF",
+                borderRadius: "16px",
+                fontSize: "16px",
                 mb: "5px",
               }}
             >
@@ -66,21 +75,38 @@ const TicketDetails = () => {
             </Typography>
           </Box>
 
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <Typography
               component="span"
               sx={{
-                mr: "10px ",
-                py: "3px",
-                px: "5px",
-                backgroundColor: "yellow",
+                mr: "10px",
+                width: "18px",
+                height: "18px",
+                display: " flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "#FCD847",
                 borderRadius: "50%",
+                fontSize: "12px",
               }}
             >
               {" "}
               &#2547;{" "}
             </Typography>
-            <Typography> 55</Typography>
+            <Typography
+              component="h4"
+              sx={{
+                m: "0px",
+              }}
+            >
+              {" "}
+              55
+            </Typography>
           </Box>
         </Stack>
       </Box>
@@ -90,32 +116,67 @@ const TicketDetails = () => {
           direction="row"
           justifyContent="space-between"
           alignItems="center"
-          sx={{ p: "5px" }}
         >
           <Box>
             <List
               dense={true}
-              sx={{ border: "1px solid red", p: "0px", m: "0px" }}
+              sx={{ border: "1px solid red", py: "0px", m: "0px" }}
             >
               <ListItem sx={{ p: "0px", m: "0px" }}>
-                <ListItemText primary="From" sx={{ p: "0px", m: "0px" }} />
+                <ListItemText
+                  primary="From"
+                  sx={{ p: "0px", m: "0px", color: "#4C4C4C" }}
+                />
               </ListItem>
-              <ListItem sx={{ p: "0px", m: "0px" }}>
-                <ListItemText primary="Dhaka" sx={{ p: "0px", m: "0px" }} />
+              <ListItem sx={{ p: "0px", m: "0px", mt: "5px" }}>
+                <ListItemText
+                  primary="Dhaka"
+                  sx={{
+                    p: "0px",
+                    m: "0px",
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                    color: "#000000",
+                  }}
+                />
               </ListItem>{" "}
               <ListItem sx={{ p: "0px", m: "0px" }}>
-                <ListItemText primary="11:35 PM" sx={{ p: "0px", m: "0px" }} />
+                <ListItemText
+                  primary="11:35 PM"
+                  sx={{
+                    p: "0px",
+                    m: "0px",
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                    color: "#000000",
+                    " & .MuiListItemText-primary": {
+                      fontWeight: "bold",
+                    },
+                  }}
+                />
               </ListItem>
               <ListItem sx={{ p: "0px", m: "0px" }}>
                 <ListItemText
                   primary="colabagan counter"
-                  sx={{ p: "0px", m: "0px" }}
+                  sx={{
+                    p: "0px",
+                    m: "0px",
+                    fontSize: "14px",
+                    textTransform: "Capitalize",
+                    color: "#4C4C4C",
+                  }}
                 />
               </ListItem>
               <ListItem sx={{ p: "0px", m: "0px" }}>
                 <ListItemText
                   primary="5 sept 2022"
-                  sx={{ p: "0px", m: "0px" }}
+                  sx={{
+                    p: "0px",
+                    m: "0px",
+                    fontSize: "12px",
+                    textTransform: "capitalize",
+                    color: "#4C4C4C",
+                  }}
                 />
               </ListItem>
             </List>
@@ -141,27 +202,64 @@ const TicketDetails = () => {
           <Box>
             <List
               dense={true}
-              sx={{ border: "1px solid red", p: "0px", m: "0px" }}
+              sx={{ border: "1px solid red", py: "0px", m: "0px" }}
             >
               <ListItem sx={{ p: "0px", m: "0px" }}>
-                <ListItemText primary="To" sx={{ p: "0px", m: "0px" }} />
+                <ListItemText
+                  primary="To"
+                  sx={{ p: "0px", m: "0px", color: "#4C4C4C" }}
+                />
               </ListItem>
+              <ListItem sx={{ p: "0px", m: "0px", mt: "5px" }}>
+                <ListItemText
+                  primary="Chottogram"
+                  sx={{
+                    p: "0px",
+                    m: "0px",
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                    color: "#000000",
+                  }}
+                />
+              </ListItem>
+
               <ListItem sx={{ p: "0px", m: "0px" }}>
-                <ListItemText primary="Dhaka" sx={{ p: "0px", m: "0px" }} />
-              </ListItem>{" "}
-              <ListItem sx={{ p: "0px", m: "0px" }}>
-                <ListItemText primary="11:35 PM" sx={{ p: "0px", m: "0px" }} />
+                <ListItemText
+                  primary="11:35 PM"
+                  sx={{
+                    p: "0px",
+                    m: "0px",
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                    color: "#000000",
+                    " & .MuiListItemText-primary": {
+                      fontWeight: "bold",
+                    },
+                  }}
+                />
               </ListItem>
               <ListItem sx={{ p: "0px", m: "0px" }}>
                 <ListItemText
                   primary="colabagan counter"
-                  sx={{ p: "0px", m: "0px" }}
+                  sx={{
+                    p: "0px",
+                    m: "0px",
+                    fontSize: "14px",
+                    textTransform: "Capitalize",
+                    color: "#4C4C4C",
+                  }}
                 />
               </ListItem>
               <ListItem sx={{ p: "0px", m: "0px" }}>
                 <ListItemText
                   primary="5 sept 2022"
-                  sx={{ p: "0px", m: "0px" }}
+                  sx={{
+                    p: "0px",
+                    m: "0px",
+                    fontSize: "12px",
+                    textTransform: "capitalize",
+                    color: "#4C4C4C",
+                  }}
                 />
               </ListItem>
             </List>

@@ -64,11 +64,6 @@ const Tab = styled(TabUnstyled)`
     background-color: #3884f7;
     color: #fff;
   }
-
-  &.${buttonUnstyledClasses.disabled} {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
 `;
 
 const TabPanel = styled(TabPanelUnstyled)(
@@ -77,9 +72,7 @@ const TabPanel = styled(TabPanelUnstyled)(
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.875rem;
   background: ${theme.palette.mode === "dark" ? "gray" : "#fff"};
-  border: 1px solid ${theme.palette.mode === "dark" ? "grey" : "grey"};
   border-radius: 5px;
-  opacity: 0.6;
   `
 );
 
@@ -90,7 +83,7 @@ const MainContent = () => {
       <Typography>{48} Available Buses</Typography>
 
       {/* options tabs  */}
-      <Box sx={{ mt: "20px", border: "1px solid salmon" }}>
+      <Box sx={{ mt: "20px" }}>
         <TabsUnstyled defaultValue={1}>
           <TabsList>
             <Tab>

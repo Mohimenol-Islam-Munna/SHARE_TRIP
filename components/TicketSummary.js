@@ -26,7 +26,7 @@ const TabsList = styled(TabsListUnstyled)(
   background-color: #FFFFFF;
   border: 1px solid gray;
   border-radius: 5px;
-  margin-bottom: 16px;
+  margin: 16px 0px;
   padding: 0px;
   display: flex;
   align-items: center;
@@ -67,8 +67,9 @@ const TabPanel = styled(TabPanelUnstyled)(
   width: 100%;
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.875rem;
-  background: ${theme.palette.mode === "dark" ? "gray" : "#fff"};
+  background-color: #FFFFFF;
   border-radius: 0px;
+  opacity: 1;
   `
 );
 
@@ -77,100 +78,231 @@ const TicketSummary = () => {
     <>
       <Box
         sx={{
-          border: "1px solid salmon",
           padding: "20px 12px",
           backgroundColor: "#E5F2FE",
+          textAlign: "right",
         }}
       >
-        <Typography>Per Person</Typography>
-        <Typography>bdt 750</Typography>
-        <Typography>bdt 775</Typography>
-        <Button>view seats</Button>
-        <Typography>cancellation policy</Typography>
+        <Typography variant="caption" sx={{ fontSize: "10px" }}>
+          Per Person
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "24px",
+            textTransform: "uppercase",
+            color: "#235FD8",
+          }}
+        >
+          bdt 750
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: "16px",
+            textTransform: "uppercase",
+            color: "#1882FF",
+          }}
+        >
+          bdt 775
+        </Typography>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: "#1882FF", fontSize: "14px", my: "15px" }}
+        >
+          view seats
+        </Button>
+        <Typography
+          sx={{
+            fontSize: "14px",
+            textTransform: "capitalize",
+            color: "#1882FF",
+          }}
+        >
+          cancellation policy
+        </Typography>
       </Box>
 
-      <Box>
+      <Box sx={{ borderLeft: "1px solid lightgray" }}>
         <TabsUnstyled defaultValue={0}>
-          <TabsList  sx={{ p: "10px" }}>
-            <Tab >
-              <Typography sx={{ textTransform: "uppercase" }}>
-                Seat Info
-              </Typography>
-            </Tab>
-            <Tab>
-              <Typography sx={{ textTransform: "uppercase" }}>
-                Policy
-              </Typography>
-            </Tab>
-          </TabsList>
+          <Box sx={{ px: "10px" }}>
+            <TabsList>
+              <Tab>
+                <Typography sx={{ textTransform: "uppercase" }}>
+                  Seat Info
+                </Typography>
+              </Tab>
+              <Tab>
+                <Typography sx={{ textTransform: "uppercase" }}>
+                  Policy
+                </Typography>
+              </Tab>
+            </TabsList>
+          </Box>
 
           <TabPanel value={0}>
-            <Box sx={{ p: "10px" }}>
-              <Box>
+            <Box sx={{ px: "10px", pb: "20px" }}>
+              <Box sx={{ color: "#4C4C4C", py: "8px" }}>
                 <Stack direction="row" alignItems="center">
                   <IconButton sx={{ p: "5px" }}>
                     <WeekendIcon />
                   </IconButton>
                   <Box sx={{ flexGrow: "1" }}>
-                    <Typography>b4 b-class</Typography>
+                    <Typography
+                      sx={{
+                        color: "#4C4C4C",
+                        fontSize: "14px",
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      b4 b-class
+                    </Typography>
                   </Box>
-                  <Typography sx={{}}>bdt 750</Typography>
+                  <Typography
+                    sx={{
+                      color: "#000000",
+                      fontSize: "14px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    bdt 750
+                  </Typography>
                 </Stack>
                 <Stack direction="row" alignItems="center">
                   <IconButton sx={{ p: "5px" }}>
                     <WeekendIcon />
                   </IconButton>
                   <Box sx={{ flexGrow: "1" }}>
-                    <Typography>c4 c-class</Typography>
+                    <Typography
+                      sx={{
+                        color: "#4C4C4C",
+                        fontSize: "14px",
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      c4 c-class
+                    </Typography>
                   </Box>
-                  <Typography sx={{}}>bdt 750</Typography>
+                  <Typography
+                    sx={{
+                      color: "#000000",
+                      fontSize: "14px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    bdt 750
+                  </Typography>
                 </Stack>
               </Box>
               <Divider />
-              <Box>
+              <Box sx={{ color: "#4C4C4C", py: "8px" }}>
                 <Stack
                   direction="row"
                   justifyContent="space-between"
                   alignItems="center"
+                  sx={{ mb: "8px" }}
                 >
-                  <Typography>charge : </Typography>
-                  <Typography>bdt 50</Typography>
+                  <Typography
+                    sx={{
+                      color: "#4C4C4C",
+                      fontSize: "14px",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    charge :{" "}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: "#000000",
+                      fontSize: "14px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    bdt 50
+                  </Typography>
                 </Stack>
                 <Stack
                   direction="row"
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Typography>insurance : </Typography>
-                  <Typography>bdt 20</Typography>
+                  <Typography
+                    sx={{
+                      color: "#4C4C4C",
+                      fontSize: "14px",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    insurance :{" "}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: "#000000",
+                      fontSize: "14px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    bdt 20
+                  </Typography>
                 </Stack>
               </Box>
               <Divider />
-              <Box>
+              <Box sx={{ color: "#4C4C4C", py: "8px" }}>
                 <Stack
                   direction="row"
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Typography>sub total : </Typography>
-                  <Typography>bdt 1570</Typography>
+                  <Typography
+                    sx={{
+                      color: "#4C4C4C",
+                      fontSize: "14px",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    sub total :{" "}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: "#000000",
+                      fontSize: "16px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    bdt 1570
+                  </Typography>
                 </Stack>
               </Box>
             </Box>
 
-            <Box sx={{ backgroundColor: "lightgray", p: "10px" }}>
+            <Box sx={{ backgroundColor: "#FAFAFA", p: "10px" }}>
               <FormGroup sx={{ fontSize: "12px" }}>
                 <FormControlLabel
                   control={<Checkbox />}
-                  label="I want to avail insurance service"
+                  label={
+                    <Typography sx={{ color: "#4C4C4C", fontSize: "14px" }}>
+                      I want to avail insurance service
+                    </Typography>
+                  }
                 />
               </FormGroup>
-              <Button fullWidth variant="contained" size="small">
+              <Button
+                fullWidth
+                variant="contained"
+                size="small"
+                sx={{
+                  backgroundColor: "#1882FF",
+                  color: "white",
+                  fontSize: "12px",
+                  py: "10px",
+                  textTransform: "uppercase",
+                }}
+              >
                 Select &amp; continue to return
               </Button>
             </Box>
           </TabPanel>
-          <TabPanel value={1}>Policy Details</TabPanel>
+          <TabPanel value={1}>
+            <Box sx={{ px: "10px", pb: "20px" }}>Policy Details</Box>
+          </TabPanel>
         </TabsUnstyled>
       </Box>
     </>
