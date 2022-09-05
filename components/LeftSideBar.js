@@ -20,8 +20,7 @@ const LeftSideBar = () => {
     <>
       <Box
         sx={{
-          // border: "1px solid #F6F6F6",
-          border: "1px solid red",
+          border: "1px solid #F6F6F6",
           borderRadius: "6px",
           boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.15)",
         }}

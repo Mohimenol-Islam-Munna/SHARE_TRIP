@@ -13,8 +13,8 @@ const ShareTrip = () => {
   return (
     <>
       <Title>Share Trip</Title>
-      <Container>
-        <Box sx={{ my: "10px" }}>
+      <Container maxWidth="lg">
+        <Box sx={{ my: "10px",  }}>
           <Grid container spacing={2}>
             {/* left sidebar  */}
             <Grid item xs={12} sm={3}>

@@ -75,7 +75,7 @@ const TabPanel = styled(TabPanelUnstyled)(
 
 const TicketSummary = () => {
   return (
-    <Box sx={{ borderRadius: "6px", border: "1px solid green" }}>
+    <Box sx={{ borderRadius: "6px"}}>
       <Box
         sx={{
           padding: "20px 12px",

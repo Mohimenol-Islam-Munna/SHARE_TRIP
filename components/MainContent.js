@@ -28,7 +28,6 @@ const TabsList = styled(TabsListUnstyled)(
   ({ theme }) => `
   width: 100%;
   background-color: #FFFFFF;
-  border: 1px solid red;
   border-radius: 5px;
   margin-bottom: 16px;
   padding: 0px;
@@ -79,7 +78,7 @@ const TabPanel = styled(TabPanelUnstyled)(
 
 const MainContent = () => {
   return (
-    <Box sx={{ p: "10px", border: "1px solid red" }}>
+    <Box sx={{ p: "10px" }}>
       {/* total transport  */}
       <Typography>{48} Available Buses</Typography>
 

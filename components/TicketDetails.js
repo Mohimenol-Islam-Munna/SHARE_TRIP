@@ -34,12 +34,13 @@ const TicketDetails = () => {
   };
 
   return (
-    <Box sx={{ border: "1px solid red" }}>
+    <Box>
       <Box sx={{ padding: "20px 12px" }}>
         <Stack
           direction="row"
           justifyContent="space-between"
           alignItems="start"
+          sx={{ flexWrap: "wrap" }}
         >
           <Typography
             component="h4"
@@ -113,9 +114,11 @@ const TicketDetails = () => {
 
       <Box sx={{ mt: "20px", p: "20px 12px" }}>
         <Stack
-          direction="row"
+          direction={{ xs: "column", md: "row" }}
           justifyContent="space-between"
           alignItems="center"
+          sx={{ flexWrap: "wrap" }}
+          spacing={{ xs: 2, md: 0 }}
         >
           <Box>
             <List dense={true} sx={{ py: "0px", m: "0px" }}>
@@ -309,7 +312,7 @@ const TicketDetails = () => {
       <Box>
         <Stack
           direction="row"
-          // justifyContent="center"
+          justifyContent="start"
           alignItems="center"
           sx={{
             p: "8px 16px 8px 16px",
@@ -324,9 +327,9 @@ const TicketDetails = () => {
               fontSize: "12px",
               textTransform: "capitalize",
               p: "0px",
+              px: "5px",
               m: "0px",
-              flexBasis: "20%",
-              border: "1px solid red"
+              minWidth: "20%",
             }}
             startIcon={<WeekendIcon sx={{ color: "#DB6848" }} />}
           >
@@ -339,9 +342,9 @@ const TicketDetails = () => {
               fontSize: "12px",
               textTransform: "capitalize",
               p: "0px",
+              px: "5px",
               m: "0px",
-              flexBasis: "20%",
-              
+              minWidth: "20%",
             }}
             startIcon={<WeekendIcon sx={{ color: "#EB950E" }} />}
           >
@@ -354,8 +357,9 @@ const TicketDetails = () => {
               fontSize: "12px",
               textTransform: "capitalize",
               p: "0px",
+              px: "5px",
               m: "0px",
-              flexBasis: "20%",
+              minWidth: "20%",
             }}
             startIcon={<WeekendIcon sx={{ color: "#2E7D31" }} />}
           >
@@ -368,8 +372,9 @@ const TicketDetails = () => {
               fontSize: "12px",
               textTransform: "capitalize",
               p: "0px",
+              px: "5px",
               m: "0px",
-              flexBasis: "20%",
+              minWidth: "20%",
             }}
             startIcon={<WeekendIcon sx={{ color: "#5BB4FF" }} />}
           >
@@ -382,8 +387,9 @@ const TicketDetails = () => {
               fontSize: "12px",
               textTransform: "capitalize",
               p: "0px",
+              px: "5px",
               m: "0px",
-              flexBasis: "20%",
+              minWidth: "20%",
             }}
             startIcon={<WeekendIcon sx={{ color: "#8E8E93" }} />}
           >
