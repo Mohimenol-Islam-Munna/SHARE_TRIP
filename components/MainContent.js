@@ -35,7 +35,7 @@ const TabsList = styled(TabsListUnstyled)(
   align-items: center;
   justify-content: center;
   align-content: space-between;
-  box-shadow: 0px 4px 30px ${theme.palette.mode === "dark" ? "grey" : "grey"};
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
   `
 );
 
@@ -70,15 +70,15 @@ const TabPanel = styled(TabPanelUnstyled)(
   ({ theme }) => `
   width: 100%;
   font-family: IBM Plex Sans, sans-serif;
-  font-size: 0.875rem;
-  background: ${theme.palette.mode === "dark" ? "gray" : "#fff"};
-  border-radius: 5px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
   `
 );
 
 const MainContent = () => {
   return (
-    <Box>
+    <Box sx={{ p: "10px" }}>
       {/* total transport  */}
       <Typography>{48} Available Buses</Typography>
 

@@ -18,38 +18,79 @@ const LeftSideBar = () => {
 
   return (
     <>
-      <Box>
+      <Box
+        sx={{
+          border: "1px solid #F6F6F6",
+          borderRadius: "6px",
+          boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.15)",
+        }}
+      >
         {/* srot & filter  */}
         <Stack
           direction="row"
           justifyContent="space-between"
-          sx={{ p: "10px" }}
+          sx={{ p: "10px 10px 25px" }}
         >
-          <Box>Sort &amp; filter </Box>
-          <Box>reset </Box>
+          <Typography
+            sx={{
+              textTransform: "capitalize",
+              color: "#000000",
+              fontSize: "14px",
+            }}
+          >
+            Sort &amp; filter{" "}
+          </Typography>
+          <Typography
+            sx={{
+              textTransform: "uppercase",
+              color: "#3884F7",
+              fontSize: "16px",
+            }}
+          >
+            reset{" "}
+          </Typography>
         </Stack>
+
         <Divider />
 
         {/* price range  */}
-        <Box>
-          <Typography>Price Range</Typography>
-          <Divider />
+        <Box sx={{ p: "25px 10px" }}>
+          <Typography sx={{ fontSize: "16px", color: "#000000", mb: "8px" }}>
+            Price Range
+          </Typography>
+
+          <Divider sx={{ border: "1px solid #E0E0E1" }} />
 
           <Stack
             direction="row"
             justifyContent="space-between"
-            sx={{ p: "10px" }}
+            sx={{ my: "18px" }}
           >
             <Box>
-              <Typography>Minimum</Typography>
-              <Typography>500</Typography>
+              <Typography sx={{ fontSize: "12px", color: "#000000" }}>
+                Minimum
+              </Typography>
+              <Typography
+                sx={{ fontSize: "16px", color: "#000000", fontWeight: "600" }}
+              >
+                500
+              </Typography>
             </Box>
+
             <Box>
-              <Typography>Maximum</Typography>
-              <Typography>2500</Typography>
+              <Typography sx={{ fontSize: "12px", color: "#000000" }}>
+                Maximum
+              </Typography>
+              <Typography
+                sx={{ fontSize: "16px", color: "#000000", fontWeight: "600" }}
+              >
+                2500
+              </Typography>
             </Box>
           </Stack>
+
           <Slider
+            sx={{ m: "0px" }}
             getAriaLabel={() => "Temperature range"}
             value={value}
             min={10}
@@ -62,48 +103,143 @@ const LeftSideBar = () => {
         <Divider />
 
         {/* class  */}
-        <Box>
-          <Typography>Class</Typography>
-          <Divider />
-          <FormGroup>
+        <Box sx={{ p: "25px 10px" }}>
+          <Typography
+            sx={{
+              textTransform: "capitalize",
+              color: "#000000",
+              fontSize: "16px",
+              mb: "8px",
+            }}
+          >
+            Class
+          </Typography>
+          <Divider sx={{ border: "1px solid #E0E0E1" }} />
+
+          <FormGroup sx={{ p: "15px 0px" }}>
             <FormControlLabel
-              sx={{ p: "0px", m: "0px" }}
-              control={<Checkbox defaultChecked />}
+              sx={{
+                p: "0px",
+                m: "0px",
+                fontSize: "16px",
+                color: "#000000",
+                fontWeight: "400",
+              }}
+              control={
+                <Checkbox
+                  sx={{
+                    p: "0px",
+                    m: "5px 5px 5px -4px",
+                    fontSize: "16px",
+                    color: "#757575",
+                  }}
+                  defaultChecked
+                />
+              }
               label="Ac(40)"
             />
             <FormControlLabel
-              sx={{ p: "0px", m: "0px" }}
-              control={<Checkbox />}
+              sx={{
+                p: "0px",
+                m: "0px",
+                fontSize: "16px",
+                color: "#000000",
+                fontWeight: "400",
+              }}
+              control={
+                <Checkbox
+                  sx={{
+                    p: "0px",
+                    m: "5px 5px 5px -4px",
+                    fontSize: "16px",
+                    color: "#757575",
+                  }}
+                />
+              }
               label="Non Ac(20)"
             />
           </FormGroup>
         </Box>
+
         <Divider />
 
         {/* schedule  */}
-        <Box sx={{ border: "1px solid salmon", boxSizing: "border-box" }}>
-          <Typography>Schedule</Typography>
-          <Divider />
-          <Typography>Departure Time</Typography>
-          <Box>
+        <Box sx={{ p: "25px 10px" }}>
+          <Typography
+            sx={{
+              mb: "8px",
+              fontSize: "16px",
+              color: "#000000",
+              fontWeight: "500",
+            }}
+          >
+            Schedule
+          </Typography>
+          <Divider sx={{ border: "1px solid #E0E0E1" }} />
+          <Box sx={{ p: "25px 0px" }}>
+            <Typography
+              sx={{
+                mb: "8px",
+                fontSize: "14px",
+                color: "#4C4C4C",
+                fontWeight: "500",
+                textTransform: "capitalize",
+              }}
+            >
+              Departure Time
+            </Typography>
+
             <FormGroup>
               <FormControlLabel
-                sx={{ border: "1px solid gray", p: "0px", m: "0px" }}
+                sx={{
+                  border: "1px solid #F3F3F6",
+                  p: "0px",
+                  m: "0px 0px 8px",
+                  fontSize: "16px",
+                  color: "#000000",
+                  fontWeight: "500",
+                  borderRadius: "3px",
+                }}
+                control={<Checkbox />}
+                label="00:00-05:45"
+              />
+
+              <FormControlLabel
+                sx={{
+                  border: "1px solid #F3F3F6",
+                  p: "0px",
+                  m: "0px 0px 8px",
+                  fontSize: "16px",
+                  color: "#000000",
+                  fontWeight: "500",
+                  borderRadius: "3px",
+                }}
                 control={<Checkbox />}
                 label="00:00-05:45"
               />
               <FormControlLabel
-                sx={{ border: "1px solid gray", p: "0px", m: "0px" }}
+                sx={{
+                  border: "1px solid #F3F3F6",
+                  p: "0px",
+                  m: "0px 0px 8px",
+                  fontSize: "16px",
+                  color: "#000000",
+                  fontWeight: "500",
+                  borderRadius: "3px",
+                }}
                 control={<Checkbox />}
                 label="00:00-05:45"
               />
               <FormControlLabel
-                sx={{ border: "1px solid gray", p: "0px", m: "0px" }}
-                control={<Checkbox />}
-                label="00:00-05:45"
-              />
-              <FormControlLabel
-                sx={{ border: "1px solid gray", p: "0px", m: "0px" }}
+                sx={{
+                  border: "1px solid #F3F3F6",
+                  p: "0px",
+                  m: "0px 0px 8px",
+                  fontSize: "16px",
+                  color: "#000000",
+                  fontWeight: "500",
+                  borderRadius: "3px",
+                }}
                 control={<Checkbox />}
                 label="00:00-05:45"
               />

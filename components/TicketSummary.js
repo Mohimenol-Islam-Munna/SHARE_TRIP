@@ -75,22 +75,22 @@ const TabPanel = styled(TabPanelUnstyled)(
 
 const TicketSummary = () => {
   return (
-    <>
+    <Box sx={{ borderRadius: "6px" }}>
       <Box
         sx={{
           padding: "20px 12px",
           backgroundColor: "#E5F2FE",
           textAlign: "right",
+          m: "0px",
         }}
       >
-        <Typography variant="caption" sx={{ fontSize: "10px" }}>
-          Per Person
-        </Typography>
+        <Typography sx={{ fontSize: "10px", m: "0px" }}>Per Person</Typography>
         <Typography
           sx={{
             fontSize: "24px",
             textTransform: "uppercase",
             color: "#235FD8",
+            m: "0px",
           }}
         >
           bdt 750
@@ -100,13 +100,19 @@ const TicketSummary = () => {
             fontSize: "16px",
             textTransform: "uppercase",
             color: "#1882FF",
+            m: "0px",
           }}
         >
           bdt 775
         </Typography>
         <Button
           variant="contained"
-          sx={{ backgroundColor: "#1882FF", fontSize: "14px", my: "15px" }}
+          sx={{
+            backgroundColor: "#1882FF",
+            fontSize: "14px",
+            my: "15px",
+            mx: "0px",
+          }}
         >
           view seats
         </Button>
@@ -115,23 +121,33 @@ const TicketSummary = () => {
             fontSize: "14px",
             textTransform: "capitalize",
             color: "#1882FF",
+            m: "0px",
           }}
         >
           cancellation policy
         </Typography>
       </Box>
 
-      <Box sx={{ borderLeft: "1px solid lightgray" }}>
+      <Box
+        sx={{
+          borderLeft: "1px solid lightgray",
+          m: "0px",
+        }}
+      >
         <TabsUnstyled defaultValue={0}>
-          <Box sx={{ px: "10px" }}>
+          <Box sx={{ px: "10px", py: "1px" }}>
             <TabsList>
               <Tab>
-                <Typography sx={{ textTransform: "uppercase" }}>
+                <Typography
+                  sx={{ textTransform: "uppercase", fontSize: "14px" }}
+                >
                   Seat Info
                 </Typography>
               </Tab>
               <Tab>
-                <Typography sx={{ textTransform: "uppercase" }}>
+                <Typography
+                  sx={{ textTransform: "uppercase", fontSize: "14px" }}
+                >
                   Policy
                 </Typography>
               </Tab>
@@ -305,7 +321,7 @@ const TicketSummary = () => {
           </TabPanel>
         </TabsUnstyled>
       </Box>
-    </>
+    </Box>
   );
 };
 

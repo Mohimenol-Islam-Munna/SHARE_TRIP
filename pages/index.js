@@ -14,19 +14,15 @@ const ShareTrip = () => {
     <>
       <Title>Share Trip</Title>
       <Container>
-        <Box sx={{ minHeight: "100vh" }}>
-          <Grid container sx={{ border: "1px solid palegreen" }}>
+        <Box sx={{ my: "10px" }}>
+          <Grid container spacing={2}>
             {/* left sidebar  */}
-            <Grid item xs={12} sm={3} sx={{ border: "1px solid salmon" }}>
+            <Grid item xs={12} sm={3}>
               <LeftSideBar />
             </Grid>
+
             {/* main content  */}
-            <Grid
-              item
-              xs={12}
-              sm={9}
-              sx={{ border: "1px solid blue", p: "10px" }}
-            >
+            <Grid item xs={12} sm={9}>
               <MainContent />
             </Grid>
           </Grid>

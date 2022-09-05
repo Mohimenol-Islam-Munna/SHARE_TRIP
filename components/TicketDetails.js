@@ -17,6 +17,7 @@ import MenuItem from "@mui/material/MenuItem";
 // icons
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import AirportShuttleIcon from "@mui/icons-material/AirportShuttle";
+import WeekendIcon from "@mui/icons-material/Weekend";
 
 const TicketDetails = () => {
   const [boardingValue, setBoardingValue] = useState("");
@@ -33,13 +34,12 @@ const TicketDetails = () => {
   };
 
   return (
-    <Box sx={{ border: "1px solid salmon", padding: "20px 12px 20px 0px" }}>
-      <Box>
+    <Box >
+      <Box sx={{ padding: "20px 12px" }}>
         <Stack
           direction="row"
           justifyContent="space-between"
           alignItems="start"
-          sx={{ border: "1px solid red" }}
         >
           <Typography
             component="h4"
@@ -111,17 +111,14 @@ const TicketDetails = () => {
         </Stack>
       </Box>
 
-      <Box sx={{ mt: "20px" }}>
+      <Box sx={{ mt: "20px", p: "20px 12px" }}>
         <Stack
           direction="row"
           justifyContent="space-between"
           alignItems="center"
         >
           <Box>
-            <List
-              dense={true}
-              sx={{ border: "1px solid red", py: "0px", m: "0px" }}
-            >
+            <List dense={true} sx={{ py: "0px", m: "0px" }}>
               <ListItem sx={{ p: "0px", m: "0px" }}>
                 <ListItemText
                   primary="From"
@@ -184,26 +181,30 @@ const TicketDetails = () => {
 
           <Box sx={{ textAlign: "center" }}>
             <Button
-              sx={{ textAlign: "center", p: "0px" }}
-              startIcon={<Box>--------</Box>}
+              sx={{ textAlign: "center", p: "0px", m: "0px" }}
+              startIcon={<Box sx={{ color: "#C7C7CC" }}>--------</Box>}
               endIcon={
-                <Stack direction="row" sx={{ alignItems: "center" }}>
+                <Stack
+                  direction="row"
+                  sx={{ alignItems: "center", color: "#C7C7CC" }}
+                >
                   -------
                   <KeyboardArrowRightIcon sx={{ mt: "3px", ml: "-8px" }} />
                 </Stack>
               }
             >
-              <AirportShuttleIcon />
+              <AirportShuttleIcon sx={{ color: "#1882FF" }} />
             </Button>
-            <Typography>{16} seats available</Typography>
-            <Typography>{16}h 00m</Typography>
+            <Typography sx={{ color: "#EF7E46" }}>
+              {16} seats available
+            </Typography>
+            <Typography sx={{ color: "#4C4C4C", mt: "5px" }}>
+              {16}h 00m
+            </Typography>
           </Box>
 
           <Box>
-            <List
-              dense={true}
-              sx={{ border: "1px solid red", py: "0px", m: "0px" }}
-            >
+            <List dense={true} sx={{ py: "0px", m: "0px" }}>
               <ListItem sx={{ p: "0px", m: "0px" }}>
                 <ListItemText
                   primary="To"
@@ -267,7 +268,7 @@ const TicketDetails = () => {
         </Stack>
       </Box>
 
-      <Box sx={{ mt: "20px" }}>
+      <Box sx={{ mt: "20px", p: "20px 12px" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <FormControl sx={{ my: 1, minWidth: 120 }} size="small" fullWidth>
@@ -310,55 +311,69 @@ const TicketDetails = () => {
           direction="row"
           justifyContent="space-between"
           alignItems="center"
-          sx={{ p: "5px", backgroundColor: "gray", color: "white" }}
+          sx={{
+            p: "8px 16px 8px 16px",
+            backgroundColor: "#FAFAFA",
+            color: "white",
+          }}
         >
           <Button
             sx={{
-              color: "white",
+              color: "#4C4C4C",
               fontSize: "12px",
               textTransform: "capitalize",
+              p: "0px",
+              m: "0px",
             }}
-            startIcon={<AirportShuttleIcon sx={{ color: "white" }} />}
+            startIcon={<WeekendIcon sx={{ color: "#DB6848" }} />}
           >
             {3} sold out
           </Button>
           <Button
             sx={{
-              color: "white",
+              color: "#4C4C4C",
               fontSize: "12px",
               textTransform: "capitalize",
+              p: "0px",
+              m: "0px",
             }}
-            startIcon={<AirportShuttleIcon sx={{ color: "white" }} />}
+            startIcon={<WeekendIcon sx={{ color: "#EB950E" }} />}
           >
             {2} booked
           </Button>
           <Button
             sx={{
-              color: "white",
+              color: "#4C4C4C",
               fontSize: "12px",
               textTransform: "capitalize",
+              p: "0px",
+              m: "0px",
             }}
-            startIcon={<AirportShuttleIcon sx={{ color: "white" }} />}
+            startIcon={<WeekendIcon sx={{ color: "#2E7D31" }} />}
           >
             {2} selected
           </Button>
           <Button
             sx={{
-              color: "white",
+              color: "#4C4C4C",
               fontSize: "12px",
               textTransform: "capitalize",
+              p: "0px",
+              m: "0px",
             }}
-            startIcon={<AirportShuttleIcon sx={{ color: "white" }} />}
+            startIcon={<WeekendIcon sx={{ color: "#5BB4FF" }} />}
           >
             {14} available
           </Button>
           <Button
             sx={{
-              color: "white",
+              color: "#4C4C4C",
               fontSize: "12px",
               textTransform: "capitalize",
+              p: "0px",
+              m: "0px",
             }}
-            startIcon={<AirportShuttleIcon sx={{ color: "white" }} />}
+            startIcon={<WeekendIcon sx={{ color: "#8E8E93" }} />}
           >
             {20} Blocked
           </Button>
