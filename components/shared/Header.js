@@ -26,11 +26,11 @@ const pages = [
   "Promotions",
   "Blog",
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
+  const [activeMenu, setActiveMenu] = useState("Bus");
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -109,8 +109,17 @@ const Header = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={() => console.log("header")}>
-                  <Typography textAlign="center" sx={{ color: "#000000" }}>
+                <MenuItem
+                  key={page}
+                  onClick={() => {
+                    handleCloseNavMenu();
+                    setActiveMenu(page);
+                  }}
+                >
+                  <Typography
+                    textAlign="center"
+                    sx={{ color: activeMenu == page ? "#1882FF" : "$000000" }}
+                  >
                     {page}
                   </Typography>
                 </MenuItem>
@@ -129,10 +138,13 @@ const Header = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                  handleCloseNavMenu();
+                  setActiveMenu(page);
+                }}
                 sx={{
                   my: 2,
-                  color: "#000000",
+                  color: activeMenu === page ? "#1882FF" : "#000000",
                   display: "block",
                   fontSize: "14px",
                   fontWeight: "400",
